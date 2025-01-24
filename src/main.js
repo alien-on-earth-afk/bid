@@ -9,7 +9,7 @@ import HomePage from './views/HomePage.vue'
 
 // Create router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/bid/'),
   routes: [
     {
       path: '/',
