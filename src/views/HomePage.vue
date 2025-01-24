@@ -52,8 +52,8 @@ export default {
       projectData: {
         name: 'Remington Hotel',
         location: 'Houston, TX',
-        activeDivisions: '32 (edit)',
-        bidDueDate: '02/20/2025 @ 2:00 EST (edit)'
+        activeDivisions: '32 ',
+        bidDueDate: '02/20/2025 @ 2:00 EST '
       },
       bidStats: {
         willBid: 34,

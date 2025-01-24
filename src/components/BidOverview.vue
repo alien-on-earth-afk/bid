@@ -44,7 +44,15 @@ export default {
   props: {
     bidStats: {
       type: Object,
-      required: true
+      required: true,
+      default: () => ({
+        willBid: 34,
+        likelyBidding: 73,
+        likelyNotBidding: 145,
+        divisionsCompleted: 19,
+        totalDivisions: 32,
+        wrongTradeInvited: 73
+      })
     }
   }
 }
@@ -53,6 +61,8 @@ export default {
 <style lang="scss" scoped>
 .bid-overview {
   padding: 20px;
+  background: white;
+  border-radius: 8px;
 
   .stats-grid {
     display: grid;
@@ -72,6 +82,7 @@ export default {
       .stat-label {
         font-size: 14px;
         color: #666;
+        margin-top: 5px;
       }
     }
   }
@@ -102,13 +113,23 @@ export default {
 
   .wrong-trade {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
     font-size: 14px;
     color: #666;
 
     .value {
       font-weight: 500;
       color: #333;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bid-overview {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
     }
   }
 }
